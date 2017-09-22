@@ -47,7 +47,7 @@
 			</sec:authorize>
 			<sec:authorize access="isAuthenticated()">
 			<ul class="list-inline intro-social-buttons">
-				<li class="list-inline-item"><a href="/user"
+				<li class="list-inline-item"><a href="/user/${user.id}"
 					class="btn btn-secondary btn-lg"> <span class="network-name">My Panel</span>
 				</a></li>
 				<li class="list-inline-item"><form:form action="/logout" method="POST">

@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.OneToOne;
 
 @Entity
 public class KeyAES {
@@ -14,6 +15,8 @@ public class KeyAES {
 	private int id;
 	@Lob
 	private String genKey;
+	@OneToOne(mappedBy = "keyAES")
+	private SIte site;
 
 	public KeyAES() {
 	}
@@ -32,6 +35,14 @@ public class KeyAES {
 
 	public void setGenKey(String genKey) {
 		this.genKey = genKey;
+	}
+
+	public SIte getSite() {
+		return site;
+	}
+
+	public void setSite(SIte site) {
+		this.site = site;
 	}
 
 	@Override

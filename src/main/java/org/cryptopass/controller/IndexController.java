@@ -36,7 +36,14 @@ public class IndexController {
 	
 	@GetMapping
 	public String index(Principal principal, Model model) {
+//		User user = (User) SecurityContextHolder.getContext()
+//				.getAuthentication().getPrincipal();
+//		int useId = user.getId();
+//		model.addAttribute("user", userService.findOne(useId));
 		if (principal != null) {
+			User user = (User) SecurityContextHolder.getContext()
+					.getAuthentication().getPrincipal();
+			model.addAttribute("user", userService.findOne(user.getId()));
 			System.out.println(principal.getName());
 			SecurityContextHolder.getContext().getAuthentication()
 					.getPrincipal();

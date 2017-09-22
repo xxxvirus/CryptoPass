@@ -22,4 +22,9 @@ public class KeyAESServiceImpl implements KeyAESService {
 		aesDao.save(keyAes);
 	}
 
+	@Override
+	public void delete(int id) {
+		aesDao.delete(id);
+	}
+
 }

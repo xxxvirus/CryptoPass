@@ -12,58 +12,19 @@
 <script src="/resources/js/chosen.jquery.min.js"></script>
 <script src="/resources/js/angular.js"></script>
 <script src="/resources/js/dirPagination.js"></script>
-<script>
-	$(function () {
-		$('select').chosen();
-	});
-</script>
 <style type="text/css">
-body {
-	padding-bottom: 70px;
-	padding-top: 50px;
+body{
+background: #16222a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #16222a, #3a6073); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #16222a, #3a6073);
 }
-
-@media ( min-width : 1000px) {
-	.navbar .navbar-nav {
-		display: inline-block;
-		float: none;
-		vertical-align: top;
-	}
-	.navbar .navbar-collapse {
-		text-align: center;
-	}
-}
-
-@media ( max-width :1000px) {
-	.nav>li {
-		float: none;
-		position: relative;
-		display: block;
-	}
-	.navbar-collapse.collapse {
-		display: none !important;
-	}
-	.navbar-collapse {
-		overflow-x: visible !important;
-	}
-	.navbar-collapse.in {
-		overflow-y: auto !important;
-	}
-	.collapse.in {
-		display: block !important;
-	}
-	.navbar-toggle {
-		display: block;
-	}
+h4, th, td{
+color: #ffffff; font-family: 'Lato', sans-serif; 
 }
 </style>
 <title><tiles:getAsString name="title" /></title>
 </head>
 <body>
-	<tiles:insertAttribute name="header" />
-	<tiles:insertAttribute name="subHeader" />
-	<div class="container-fluid">
 		<tiles:insertAttribute name="body" />
-	</div>
 </body>
 </html>

@@ -6,4 +6,5 @@ public interface KeyAESService {
 
 	KeyAES findOne(int id);
 	void save(KeyAES keyAes);
+	void delete(int id);
 }
